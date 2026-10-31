@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML FORMS</h1>
+    </header>
+
+    <main>
+        <form>
+            <h2>Form Title and Validation</h2>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name">Name:</label>
+                <input type="text"  id="name"  name="name" placeholder="Enter your name"   required
+                    pattern="[a-zA-Z ]{3,}" title="Name should contain at least 3 letters" autocomplete="name" >
+                <br><br>
+                <label for="age">Age:</label>
+                <input  type="number"  id="age"  name="age"  placeholder="Enter your age"  min="1" >
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required autocomplete="email" >
+                <br><br>
+                <label for="dob">Date of Birth:</label>
+                <input   type="date"   id="dob" name="dob"  >
+                <br><br>
+                <label for="phone">Phone:</label>
+                <input  type="tel"id="phone"name="phone"  placeholder="Enter 10 to 14 digits" pattern="[0-9]{10,14}"
+                    required title="Phone number must contain 10 to 14 digits"autocomplete="tel" >
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password"  id="password"  name="password"  required autocomplete="new-password" >
+                <br><br>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">--Select--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <br><br>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Marital Status</legend>
+
+                <input
+                    type="radio" id="single" name="status" value="single" required  >
+                <label for="single">Single</label>
+
+                <input
+                    type="radio"  id="married"  name="status" value="married"  >
+                <label for="married">Married</label>
+
+                <input type="radio" id="divorced" name="status" value="divorced"   >
+                <label for="divorced">Divorced</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Hobbies</legend>
+                <input
+                    type="checkbox"
+                    id="reading"
+                    name="hobbies"
+                    value="reading"
+                >
+                <label for="reading">Reading</label>
+
+                <input
+                    type="checkbox"
+                    id="travelling"
+                    name="hobbies"
+                    value="travelling"
+                >
+                <label for="travelling">Travelling</label>
+
+                <input
+                    type="checkbox"
+                    id="cooking"
+                    name="hobbies"
+                    value="cooking"
+                >
+                <label for="cooking">Cooking</label>
+
+            </fieldset>
+
+            <br>
+
+            <label for="message">Message:</label>
+            <br>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+            ></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </main>
+
+</body>
+</html>
